@@ -3,6 +3,8 @@
         "iostream": "cpp",
         "vector": "cpp",
         "ostream": "cpp",
-        "xtree": "cpp"
+        "xtree": "cpp",
+        "system_error": "cpp",
+        "xlocale": "cpp"
     }
 }
