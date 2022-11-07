@@ -12,28 +12,28 @@ vector<vector<int>> graph = {{0, 2, INF, INF, 6, INF, INF, INF}, {2, 0, 3, 7, IN
 
 
 void dijkstra(int src, vector<int>& dis) {
-    vector<int> visited(N);
-    dis[src] = 0;
-    for (int i = 0; i < N; i++) {
-        int j = -1;
-        for (int k = 0; k < N; k++) {
-            if (!visited[k] && dis[k] <= dis[j]) {
-                j = k;
-            }
-        }
+    vector<int> visited(N, 0);
+	dis[src] = 0;
+	int j = src;
+	for (int i = 0; i < N; i++) {
+		visited[j] = 1;
 
-        visited[j] = 1;
-
-        for (int m = 0; m < N; m++) {
-            dis[m] = min(dis[m], dis[j] + graph[j][m]);
-        }
-    }
-    cout << "this is a test" << endl;
+		for (int m = 0; m < N; m++) {
+			dis[m] = min(dis[m], dis[j] + graph[j][m]);
+		}
+		j = N;
+		for (int k = 0; k < N; k++) {
+			if (!visited[k] && dis[k] <= dis[j]) {
+				j = k;
+			}
+		}
+	}
+	cout << "this is a test" << endl;
 }
 
 int main() {
     int src = 0;
-    vector<int> dis(N, 1100);
+    vector<int> dis(N + 1, 1100);
     dijkstra(src, dis);
     for (int i = 0; i < N; i++) {
         cout << dis[i] << " ";
