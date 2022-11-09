@@ -5,6 +5,7 @@
         "ostream": "cpp",
         "xtree": "cpp",
         "system_error": "cpp",
-        "xlocale": "cpp"
+        "xlocale": "cpp",
+        "algorithm": "cpp"
     }
 }
