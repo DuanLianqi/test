@@ -27,8 +27,11 @@ int main() {
     //     cout << it->str() << " ";
     // }
 
-    string data = "he...ll..o, worl..d!";
-    regex reg("\\.");   //正则匹配点.
-    cout << regex_replace(data, reg, "");
+    // string data = "he...ll..o, worl..d!";
+    // regex reg("\\.");   //正则匹配点.
+    // cout << regex_replace(data, reg, "");
+
+    string text = "ID : 042\r\nSEX = M\r\nDOB = 1998-07-21\r\n";
+    cout << text;
     return 0;
 }
